@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-chart-demo": {
+    "ngx-amchart-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-chart-demo",
+            "outputPath": "dist/ngx-amchart-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-chart-demo:build"
+            "browserTarget": "ngx-amchart-demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-chart-demo:build:production"
+              "browserTarget": "ngx-amchart-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-chart-demo:build"
+            "browserTarget": "ngx-amchart-demo:build"
           }
         },
         "test": {
@@ -115,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngx-chart-demo:serve"
+            "devServerTarget": "ngx-amchart-demo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-chart-demo:serve:production"
+              "devServerTarget": "ngx-amchart-demo:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "ngx-chart-demo"
+  "defaultProject": "ngx-amchart-demo"
 }

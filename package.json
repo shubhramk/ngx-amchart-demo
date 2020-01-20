@@ -1,16 +1,19 @@
 {
-  "name": "ngx-chart-demo",
+  "name": "ngx-amchart-demo",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
+    "postinstall": "ng build --prod --aot"
   },
   "private": true,
   "dependencies": {
+    "@amcharts/amcharts4": "^4.8.0",
     "@angular/animations": "~8.2.14",
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
