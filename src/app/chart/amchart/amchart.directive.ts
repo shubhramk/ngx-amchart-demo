@@ -13,7 +13,7 @@ am4core.useTheme(am4themes_animated);
 })
 export class AmchartDirective implements OnInit, OnDestroy, OnChanges {
 
-  @Input() type;
+  @Input() appAmchart;
   @Input() data: Array<any> = [];
 
   private chart: any = null;
@@ -41,7 +41,7 @@ export class AmchartDirective implements OnInit, OnDestroy, OnChanges {
    */
   private createChart() {
     this.destroyChart();
-    const chart = am4core.create(this.elmRef.nativeElement, am4charts[this.type]);
+    const chart = am4core.create(this.elmRef.nativeElement, am4charts[this.appAmchart]);
     this.amChartService.setConfig(chart);
     this.chart = chart;
     this.chart.data = this.data;
