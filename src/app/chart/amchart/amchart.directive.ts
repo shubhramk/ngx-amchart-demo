@@ -41,7 +41,8 @@ export class AmchartDirective implements OnInit, OnDestroy, OnChanges {
    */
   private createChart() {
     this.destroyChart();
-    const chart = am4core.create(this.elmRef.nativeElement, am4charts[this.appAmchart]);
+    const chart = am4core.create(this.elmRef.nativeElement, am4charts[this.appAmchart
+    ]);
     this.amChartService.setConfig(chart);
     this.chart = chart;
     this.chart.data = this.data;
